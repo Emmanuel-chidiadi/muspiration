@@ -263,8 +263,19 @@ h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.25; }
 .why li::before { content: "0" counter(why); font-family: var(--font-body); font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.1em; color: var(--cobalt); }
 
 @media (max-width: 899px) {
-  .founder-grid { grid-template-columns: 1fr; }
-  .founder-photo { width: min(100%, 400px); margin-right: 14px; }
+  .founder-grid {
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+  }
+
+  .founder-photo {
+    width: min(100%, 400px);
+    margin-right: 0;
+  }
+
+  #founder {
+    overflow-x: clip;
+  }
 }
 
 /* ---------- Collaborate ---------- */
