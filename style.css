@@ -331,3 +331,37 @@ h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.25; }
   .js .reveal { opacity: 1; transform: none; }
   .btn:hover { transform: none; }
 }
+
+/* ---------- MUSPIRATION: Softer rounded design ---------- */
+
+/* Smooth transition from the navy hero into the first white section */
+.hero + .section-light {
+  position: relative;
+  z-index: 1;
+  border-radius: 56px 56px 0 0;
+}
+
+/* Softer corners for the founder portrait */
+.founder-photo img,
+.founder-photo::after {
+  border-radius: 18px;
+}
+
+/* More refined button corners */
+.btn,
+.nav-toggle {
+  border-radius: 12px;
+}
+
+/* Responsive curves for mobile screens */
+@media (max-width: 899px) {
+  .hero + .section-light {
+    border-radius: 36px 36px 0 0;
+  }
+
+  .founder-photo img,
+  .founder-photo::after {
+    border-radius: 14px;
+  }
+}
+
