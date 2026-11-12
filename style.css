@@ -461,12 +461,15 @@ h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.25; }
 
 /* Smaller curves on mobile */
 @media (max-width: 899px) {
-  #explore::before,
-  #founder::before {
+  #explore::before {
     top: -28px;
     left: -10%;
     width: 120%;
     height: 56px;
+  }
+
+  #founder::before {
+    content: none;
   }
 }
 
