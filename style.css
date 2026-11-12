@@ -446,6 +446,10 @@ h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.25; }
   isolation: isolate;
 }
 
+#founder {
+  overflow-x: clip;
+}
+
 #explore::before,
 #founder::before {
   content: "";
