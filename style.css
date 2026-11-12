@@ -183,6 +183,53 @@ a { color: inherit; }
   .hero-art img { width: min(86vw, 400px); }
 }
 
+/* ---------- Hero Logo Animation ---------- */
+
+.hero-art img {
+  animation: heroLogoEntrance 1.2s ease-out both;
+}
+
+@keyframes heroLogoEntrance {
+  0% {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+
+  70% {
+    opacity: 1;
+    transform: translateX(-8px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Reduced movement for smaller screens */
+@media (max-width: 899px) {
+  .hero-art img {
+    animation: heroLogoEntranceMobile 1s ease-out both;
+  }
+
+  @keyframes heroLogoEntranceMobile {
+    0% {
+      opacity: 0;
+      transform: translateX(35px);
+    }
+
+    75% {
+      opacity: 1;
+      transform: translateX(-4px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
 /* ---------- Sections ---------- */
 .section { padding-block: clamp(4.5rem, 9vw, 8rem); }
 .section-light { background: var(--white); color: var(--navy); }
