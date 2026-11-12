@@ -365,3 +365,43 @@ h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.25; }
   }
 }
 
+/* ---------- Curved section transitions ---------- */
+
+#explore,
+#founder {
+  position: relative;
+  isolation: isolate;
+}
+
+#explore::before,
+#founder::before {
+  content: "";
+  position: absolute;
+  top: -42px;
+  left: -5%;
+  width: 110%;
+  height: 84px;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  background: inherit;
+  z-index: 0;
+  pointer-events: none;
+}
+
+#explore > .container,
+#founder > .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Smaller curves on mobile */
+@media (max-width: 899px) {
+  #explore::before,
+  #founder::before {
+    top: -28px;
+    left: -10%;
+    width: 120%;
+    height: 56px;
+  }
+}
+
+
