@@ -444,9 +444,13 @@ h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.25; }
   width: 110%;
   height: 84px;
   border-radius: 50% 50% 0 0 / 100% 100% 0 0;
-  background: inherit;
+  background: var(--navy);
   z-index: 0;
   pointer-events: none;
+}
+
+#founder::before {
+  background: var(--white);
 }
 
 #explore > .container,
